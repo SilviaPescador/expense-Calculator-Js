@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h2>Calculadora de gastos</h2>
+
+    <div class="container">
+
+        <h4>tu ahorro</h4>
+        <h1 id="balance">0.00€</h1>
+
+        <div class="totales">
+
+            <div>
+                <h4>ingreso</h4>
+                <p id= "ingreso">0.00€</p>
+            </div>
+    
+            <div>
+                <h4>gasto</h4>
+                <p id="gasto">0.00€</p>
+            </div>
+
+        </div>
+
+        <h3>Historial</h3>
+        <ul id="lista">
+
+        </ul>
+    
+       <h3>Añadir nueva transacción</h3>
+        <form id= "form-entradas" novalidate>
+
+            <div>
+                <label for="concepto">Concepto</label>
+                <input type="text" id="concepto" name="concepto" placeholder="Añade concepto..." required/>
+            </div>
+
+            <div>
+                <label for="cantidad">Cantidad 
+                    <p>negativa(gastos) / positiva(ingresos)</p>
+                    </label>
+                <input  type="number" id="cantidad" name="cantidad" placeholder="Añade cantidad..." required/>
+            </div>
+
+            <button class="add-button">Añadir transacción</button>
+
+        </form>
+
+    </div>
+
+    <script src="index.js"></script> 
+    
+</body>
+</html>
