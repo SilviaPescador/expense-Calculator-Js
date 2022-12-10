@@ -146,23 +146,35 @@ input[type='number'] {
 /* CSS for elements created by JS */
 
 #lista {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    font-size: 75%;
     
 }
 
 .ingreso-gasto {
     width: 100%;
-    font-size: 14px;
     display: flex;
     justify-content:space-between;
     padding: 0.2rem;
     border-bottom: 1px solid #bbb;
+    align-items: center;
+}
+
+.ingreso-gasto > span {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+  
 }
 
 .delete-button {
+    margin-left: 5px;
+    max-block-size: 24px;
     border-radius: 10px;
+    border-color: var(--box-shadow);
     box-shadow: var(--box-shadow);
 }
