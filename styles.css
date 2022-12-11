@@ -174,9 +174,12 @@ input[type='number'] {
 }
 
 .delete-button {
+    cursor: pointer;
     margin-left: 5px;
     max-block-size: 24px;
     border-radius: 10px;
     border-color: var(--box-shadow);
     box-shadow: var(--box-shadow);
+    
 }
+
