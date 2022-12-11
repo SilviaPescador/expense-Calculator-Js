@@ -64,13 +64,13 @@ function actualizaValores() {
 
 	const cantidades = movimientos.map(movimiento => Number(movimiento.cantidad))
 	
-	const totalIngresos = (cantidades.filter(cantidad => cantidad > 0)).reduce((acc, ing)=> acc + ing, 0)
+	const totalIngresos = (cantidades.filter(cantidad => cantidad > 0)).reduce((acc, ing)=> acc + ing, 0).toFixed(2)
 	ingreso.innerText = `${totalIngresos}€`
 
-	const totalGastos = cantidades.filter(cantidad => cantidad < 0).reduce((acc, gasto)=> acc + gasto, 0)
+	const totalGastos = cantidades.filter(cantidad => cantidad < 0).reduce((acc, gasto)=> acc + gasto, 0).toFixed(2)
 	gasto.innerText = `${totalGastos}€`
 
-	const totalBalance = cantidades.reduce((acc, sig)=> acc + sig, 0)
+	const totalBalance = cantidades.reduce((acc, sig)=> acc + sig, 0).toFixed(2)
 	balance.innerText = `${totalBalance}€`
 
 }

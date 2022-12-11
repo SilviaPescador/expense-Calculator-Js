@@ -24,6 +24,7 @@ h2 {
     margin: 40px 0 10px;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
+    font-size-adjust: 80%;
 }
 
 h3 {
