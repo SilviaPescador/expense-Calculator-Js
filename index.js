@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
 
 	movimientos.push(movimiento);
 
-	añadirAlHistorial(movimiento);
+	añadeALista(movimiento);
 
 	actualizaValores();
 
@@ -40,14 +40,16 @@ form.addEventListener("submit", (event) => {
 	}
 })
 
-function añadirAlHistorial(movimiento) {
-	//DOM 
+function añadeALista(movimiento) {
+	// DOM 
 	const newElement = document.createElement('li')
 	newElement.classList.add('ingreso-gasto')
 
 	newElement.innerHTML = `
-		${movimiento.concepto} <span>${movimiento.cantidad}€
-		<button class="delete-button" onclick="borrarMovimiento(${movimiento.id})">🗑️</button></span>
+		${movimiento.concepto} 
+		<span>${Number(movimiento.cantidad).toFixed(2)}€
+		<button class="delete-button" onclick="borrarMovimiento(${movimiento.id})">🗑️</button>
+		</span>
 	`
 	lista.appendChild(newElement)
 }
@@ -64,10 +66,10 @@ function actualizaValores() {
 
 	const cantidades = movimientos.map(movimiento => Number(movimiento.cantidad))
 	
-	const totalIngresos = (cantidades.filter(cantidad => cantidad > 0)).reduce((acc, ing)=> acc + ing, 0).toFixed(2)
+	const totalIngresos = (cantidades.filter(cantidad => cantidad > 0)).reduce((acc, nuevoIngreso)=> acc + nuevoIngreso, 0).toFixed(2)
 	ingreso.innerText = `${totalIngresos}€`
 
-	const totalGastos = cantidades.filter(cantidad => cantidad < 0).reduce((acc, gasto)=> acc + gasto, 0).toFixed(2)
+	const totalGastos = cantidades.filter(cantidad => cantidad < 0).reduce((acc, nuevoGasto)=> acc + nuevoGasto, 0).toFixed(2)
 	gasto.innerText = `${totalGastos}€`
 
 	const totalBalance = cantidades.reduce((acc, sig)=> acc + sig, 0).toFixed(2)
@@ -82,9 +84,9 @@ function actualizaLocalStorage() {
 
 
 function inicio() {
-	
+	// Resetea la lista + pinta movimientos actualizados + pinta valores actualizados.
 	lista.innerHTML = ''
-	movimientos.forEach(añadirAlHistorial)
+	movimientos.forEach(añadeALista)
 	actualizaValores()
 }
 

@@ -18,13 +18,14 @@ h1 {
 
 h2 {
     text-align: center;
-    width: 30%;
+    width: 50%;
     border: 1px solid #bbb;
     padding-bottom: 10px;
     margin: 40px 0 10px;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
-    font-size-adjust: 80%;
+    font-size: 100%;
+    justify-content: center;
 }
 
 h3 {
