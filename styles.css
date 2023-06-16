@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    background-color:#262b5cf0;
+    background-color:#a9daef7d;
     text-align: center;
     width: 50%;
     /* border: 1px solid #bbb; */
@@ -44,7 +44,7 @@ h4{
 
 body {
     /* background-color: #3c4065d9; */
-    background-image: url("./3357683.jpg");
+    background-image: url("./44_8.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ body {
 }
 
 .card {
-    background-color: #262b5cf0;
+    background-color: #b7e4f87d;
     text-align: center;
     width: 50%;
     border: 2px solid #0c032995;
@@ -96,7 +96,7 @@ body {
 }
 
 #ingreso{
-    color: rgb(99, 205, 99);
+    color: rgb(17, 133, 17);
 }
 
 #gasto {
@@ -122,7 +122,7 @@ input[type='number'] {
     font-size: 13px;
     padding: 5px;
     width: 100%; 
-    background-color: #bbb;
+    background-color: #f8f0f0d6;
 }
 .button-container {
     display: flex;
