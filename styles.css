@@ -17,9 +17,11 @@ h1 {
 }
 
 h2 {
+    background-color:#262b5cf0;
     text-align: center;
     width: 50%;
-    border: 1px solid #bbb;
+    /* border: 1px solid #bbb; */
+    border: 2px solid #0c03298e;
     padding: 0.4em;
     margin: 40px 0 0;
     border-radius: 12px;
@@ -41,8 +43,9 @@ h4{
 }
 
 body {
-    /* background-color: #ebe6f4; */
-    background-color: #3c4065d9;
+    /* background-color: #3c4065d9; */
+    background-image: url("./3357683.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,9 +61,10 @@ body {
 }
 
 .card {
+    background-color: #262b5cf0;
     text-align: center;
     width: 50%;
-    border: 1px solid #bbb;
+    border: 2px solid #0c032995;
     padding: 1em 3em;
     /* margin: 40px 0 10px; */
     border-radius: 12px;
