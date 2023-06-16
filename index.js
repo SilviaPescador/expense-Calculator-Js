@@ -48,7 +48,7 @@ function añadeALista(movimiento) {
 	newElement.innerHTML = `
 		${movimiento.concepto} 
 		<span>${Number(movimiento.cantidad).toFixed(2)}€
-		<button class="delete-button" onclick="borrarMovimiento(${movimiento.id})">🗑️</button>
+		<button class="delete-button" onclick="borrarMovimiento(${movimiento.id})"><i class="bi bi-trash3"></i></button>
 		</span>
 	`
 	lista.appendChild(newElement)
@@ -78,7 +78,6 @@ function actualizaValores() {
 }
 
 function actualizaLocalStorage() {
-
 	localStorage.setItem('movimientos', JSON.stringify(movimientos));	
 }
 

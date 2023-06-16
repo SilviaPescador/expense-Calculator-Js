@@ -20,8 +20,8 @@ h2 {
     text-align: center;
     width: 50%;
     border: 1px solid #bbb;
-    padding-bottom: 10px;
-    margin: 40px 0 10px;
+    padding: 0.4em;
+    margin: 40px 0 0;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
     font-size: 100%;
@@ -31,7 +31,7 @@ h2 {
 h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 10px;
-    margin: 40px 0 10px; 
+    margin: 30px 0 10px; 
 }
 
 h4{
@@ -41,7 +41,8 @@ h4{
 }
 
 body {
-    background-color: #ebe6f4;
+    /* background-color: #ebe6f4; */
+    background-color: #3c4065d9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +56,25 @@ body {
     margin: 30px auto;
     width: 350px;
 }
+
+.card {
+    text-align: center;
+    width: 50%;
+    border: 1px solid #bbb;
+    padding: 1em 3em;
+    /* margin: 40px 0 10px; */
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    font-size: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+    }
+}
+    
 
 .totales {
     display: flex;
@@ -76,7 +96,7 @@ body {
 }
 
 #gasto {
-    color: rgb(239, 72, 72);
+    color: rgb(181, 5, 5);
 }
 
 label {
@@ -92,30 +112,36 @@ label > p {
 
 input[type='text'],
 input[type='number'] {
-    border: 1px solid #bbb;
+    border: 1px solid #1e1c1c;
     border-radius: 12px;
     display: block;
     font-size: 13px;
     padding: 5px;
     width: 100%; 
+    background-color: #bbb;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
 .add-button{
-    background: whitesmoke;
     margin-top: 1rem;
     cursor: pointer;
     border: none;
     padding: 2px 10px;
-    color: rgb(11, 11, 11);
+    color: rgb(236, 229, 229);
     font-size: 14px;
     letter-spacing: 0.5mm;
     position: relative;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
-    width: 100%;
+    width: 30%;
+    background:rgb(20, 20, 21)
 }
 
-.add-button::before {
+/* BUTTON ANIMATION */
+/* .add-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -130,9 +156,9 @@ input[type='number'] {
     filter: blur(8px);
     animation: glowing 20s linear infinite;
 
-}
+} */
 
-@keyframes glowing {
+/* @keyframes glowing {
     0% {
         background-position : 0 0;
     }
@@ -142,7 +168,7 @@ input[type='number'] {
     100% {
         background-position : 0 0;
     }
-}
+} */
 
 
 /* CSS for elements created by JS */
@@ -176,10 +202,8 @@ input[type='number'] {
 .delete-button {
     cursor: pointer;
     margin-left: 5px;
-    max-block-size: 24px;
-    border-radius: 10px;
-    border-color: var(--box-shadow);
-    box-shadow: var(--box-shadow);
-    
+    color: rgb(181, 5, 5);
+    background: transparent;
+    border: none;
 }
 
